@@ -1,28 +1,28 @@
-### Project Overview
+# Project Overview
 
- Problem Statement
+## Problem Statement
 
 The Olympic Games, considered to be the world's foremost sports competition has more than 200 nations participating across the Summer and Winter Games alternating by occurring every four years but two years apart.
 Throughout this project, we will explore the Olympics dataset(scraped from https://en.wikipedia.org/wiki/All-time_Olympic_Games_medal_table), look at some interesting statistics and then try to find out which country is the King of the Olympic Games. 
 
-About the dataset
+## About the dataset
 
 The dataset has details of 146 countries with the following 16 features
 
-Feature	Description
+## Feature	Description
 
 Country_Name	Name of the country
-# Summer	No. of games played in Summer Olympics
+Summer	No. of games played in Summer Olympics
 Gold_Summer	No. of gold medals won in Summer Olympics
 Silver_Summer	No. of silver medals won in Summer Olympics
 Bronze_Summer	No. of bronze medals won in Summer Olympics
 Total_Summer	Total no. of all the medals won in Summer Olympics
-# Winter	No. of games played in Winter Olympics
+Winter	No. of games played in Winter Olympics
 Gold_Winter	No. of gold medals won in Winter Olympics
 Silver_Winter	No. of silver medals won in Winter Olympics
 Bronze_Winter	No. of bronze medals won in Winter Olympics
 Total_Winter	Total no. of all the medals won in Winter Olympics
-# Games	Total no. of games played in both Summer and Winter Olympics
+Games	Total no. of games played in both Summer and Winter Olympics
 Gold_Total	Total no. of gold medals won in both Summer and Winter Olympics
 Silver_Total	Total no. of silver medals won in both Summer and Winter Olympics
 Bronze_Total	Total no. of bronze medals won in both Summer and Winter Olympics
@@ -30,7 +30,7 @@ Total	Total no. of all the medals won in both Summer and Winter Olympics
 
 
 
-### Learnings from the project
+# Learnings from the project
 
  After completing this project, you will have a better understanding of data handling with python(pandas). In this project, you will be applying the following concepts :
 1.	Dataframe operations
@@ -40,9 +40,9 @@ Total	Total no. of all the medals won in both Summer and Winter Olympics
 5.	Mathematical operations
 
 
-### Approach taken to solve the problem
+# Approach taken to solve the problem
 
- Step 1 - Data Loading
+## Step 1 - Data Loading
 
 Let's start with the simple task of loading the data and do a little bit of renaming.
 Instructions :
@@ -50,7 +50,7 @@ Instructions :
 •	In the dataframe, rename the column Total to Total_Medals
 •	Display first 10 records using "head()" function to take a look at the dataframe. 
 
-Step 2 - Summer or Winter
+## Step 2 - Summer or Winter
 
 Some Countries love Summer, some Winter. We think it has to do something with their Olympic performance.
 For this task, we will try to figure out which olympic event does a country perform better in.
@@ -92,7 +92,7 @@ dataframe after:
 ________________________________________
 •	Find out which has been a better event with respect to all the performing countries by using value_counts() function and store it in a new variable called 'better_event'.
 
-Step 3 - Top 10
+## Step 3 - Top 10
 
 So we figured out which is a better event for each country. Let's move on to finding out the best performing countries across all events
 In this task we will try to find 
@@ -113,7 +113,7 @@ df = pd.DataFrame({'ID': [1, 2, 3, 4, 5],
                  'Score': [33, 92, 26, 75, 80]})
 
 print("The dataframe:\n",df)
-# Filtering the 3 largest scores and getting the IDs associated with it
+Filtering the 3 largest scores and getting the IDs associated with it
 top_3=df.nlargest(3, 'Score')
 print("df having top 3 scores:")
 print(top_3)
@@ -145,7 +145,7 @@ variable1	list	list containing countries names
 •	Call the 'top_ten()' function for the three columns :Total_Summer,Total_Winter and Total_Medals and store their respective results in lists called 'top_10_summer', 'top_10_winter' and 'top_10'
 •	Create a new list 'common' that stores the common elements between the three lists('top_10_summer', 'top_10_winter' and 'top_10') 
 
-Step 4 - Plotting Top 10
+## Step 4 - Plotting Top 10
 
 From the lists that you have created from the previous task, let's plot the medal count of the top 10 countries for better visualisation
 Instructions :
@@ -169,7 +169,7 @@ ________________________________________
 •	Take each subsetted dataframe and plot a bar graph between the country name and total medal count according to the event (For e.g. for 'summer_df' plot a bar graph between Country_Name and Total_Summer)
 •	Modify the axes info accordingly.
 
-Step 5 - Top performing country(Gold)
+## Step 5 - Top performing country(Gold)
 
 Winning silver or bronze medals is a big achievement but winning gold is bigger. 
 Using the above created dataframe subsets, in this task let's find out which country has had the best performance with respect to the ratio between gold medals won and total medals won.
@@ -181,7 +181,7 @@ Instructions :
 •	In the dataframe top_df'(created in the previous function) , create a new column Golden_Ratio which is the quotient after dividing the two columns Gold_Total and Total_Medals.
 •	Find the max value of Golden_Ratio and the country associated with it and store them in top_max_ratio' and 'top_country_gold' respectively.
 
-Step 6 - Best in the world
+## Step 6 - Best in the world
 
 Winning Gold is great but is winning most gold equivalent to being the best overall performer? Let's find out.
 Instructions :
@@ -189,7 +189,7 @@ Instructions :
 •	Update the dataframe 'data_1' to include a new column called Total_Points which is a weighted value where each gold medal counts for 3 points, silver medals for 2 points, and bronze medals for 1 point. (i.e. You need to take the weighted value of Gold_Total, Silver_Total and Bronze_Total)
 •	Find the max value of Total_Points in 'data_1' and the country associated with it and store it in variables 'most_points' and 'best_country' respectively.
 
-Step 7 - Plot for the best
+## Step 7 - Plot for the best
 
 We know which country is best when it comes to winning the most points in the Olympic Games. Let's plot the medal count to visualise their success better.
 Instructions
